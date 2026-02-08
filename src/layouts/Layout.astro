@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Nav from "../components/Nav.astro";
 
 interface Props {
   title?: string;
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const {
-  title = "Professor Bean — Your AI Coffee Mentor | BrewGPT",
+  title = "Professor Bean — Your AI Coffee Mentor | Prof Bean",
   description = "Meet Professor Bean, the AI coffee advisor that helps you brew better coffee. Get personalized advice, track your brews, and level up your coffee game.",
 } = Astro.props;
 ---
@@ -33,6 +34,7 @@ const {
     <title>{title}</title>
   </head>
   <body class="bg-espresso-black text-off-white">
+    <Nav />
     <slot />
   </body>
 </html>

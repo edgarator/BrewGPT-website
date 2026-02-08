@@ -1,0 +1,433 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Privacy Policy — Prof Bean"
+  description="Prof Bean privacy policy. Your brew data stays on your device. Learn how we handle location, AI advice, and third-party services."
+>
+  <main class="pt-20 pb-24">
+    <!-- Header -->
+    <section class="px-6 py-16 sm:py-20 text-center">
+      <div class="max-w-3xl mx-auto">
+        <a
+          href="/support"
+          class="inline-block text-sm text-golden-roast hover:underline mb-8"
+        >
+          &larr; Back to Support
+        </a>
+        <img
+          src="/app-icon.webp"
+          alt="Professor Bean"
+          class="w-20 h-20 rounded-2xl mx-auto mb-6"
+        />
+        <h1
+          class="font-heading text-4xl sm:text-5xl font-bold text-off-white mb-3"
+        >
+          Privacy Policy
+        </h1>
+        <p class="text-sm text-off-white/40">Last Updated: January 23, 2026</p>
+      </div>
+    </section>
+
+    <!-- TL;DR -->
+    <section class="px-6 pb-12">
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-golden-roast rounded-2xl p-6 sm:p-8">
+          <p class="font-heading font-bold text-espresso-black text-lg mb-2">
+            TL;DR
+          </p>
+          <p class="text-espresso-black/80 text-sm leading-relaxed">
+            Your brew data stays on your device. We only access location (if you
+            allow it) to show weather. Professor Bean's advice can be generated
+            via OpenAI (cloud) or Apple Intelligence (on-device) — only anonymous
+            brew parameters are sent, never personal information.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="px-6 pb-20">
+      <div class="max-w-3xl mx-auto space-y-12">
+        <!-- Introduction -->
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-off-white mb-4">
+            Introduction
+          </h2>
+          <p class="text-sm text-off-white/60 leading-relaxed">
+            Prof Bean ("we", "our", or "the app") is a coffee brewing companion
+            app designed to help you track and improve your brews. We are
+            committed to protecting your privacy and being transparent about how
+            we handle your data.
+          </p>
+        </div>
+
+        <!-- Data We Collect -->
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-off-white mb-4">
+            Data We Collect
+          </h2>
+
+          <h3 class="font-semibold text-off-white mb-2 mt-6">
+            Brew Data (Stored Locally)
+          </h3>
+          <ul
+            class="text-sm text-off-white/60 leading-relaxed list-disc pl-5 space-y-1.5 mb-3"
+          >
+            <li>
+              Brew parameters you enter (dose, yield, time, grind size, etc.)
+            </li>
+            <li>Brew ratings and notes</li>
+            <li>Custom fields you create</li>
+          </ul>
+          <p class="text-sm text-off-white/60 leading-relaxed">
+            <strong class="text-off-white">This data is stored only on your device</strong>
+            using Apple's SwiftData framework. We do not have access to your brew
+            records.
+          </p>
+
+          <h3 class="font-semibold text-off-white mb-2 mt-6">
+            Location Data (Optional)
+          </h3>
+          <p class="text-sm text-off-white/60 leading-relaxed mb-3">
+            If you enable weather auto-fill, we request access to your location
+            to:
+          </p>
+          <ul
+            class="text-sm text-off-white/60 leading-relaxed list-disc pl-5 space-y-1.5 mb-3"
+          >
+            <li>
+              Fetch current weather conditions (temperature, humidity, pressure)
+            </li>
+            <li>Display weather data alongside your brew records</li>
+          </ul>
+          <p class="text-sm text-off-white/60 leading-relaxed mb-2">
+            <strong class="text-off-white">Your location is:</strong>
+          </p>
+          <ul
+            class="text-sm text-off-white/60 leading-relaxed list-disc pl-5 space-y-1.5"
+          >
+            <li>Only accessed when you explicitly enable weather features</li>
+            <li>Used solely to fetch weather data from WeatherAPI.com</li>
+            <li>Never stored or tracked by us</li>
+            <li>
+              Processed according to <a
+                href="https://www.weatherapi.com/privacy.aspx"
+                class="text-golden-roast hover:underline"
+                target="_blank"
+                rel="noopener noreferrer">WeatherAPI.com's Privacy Policy</a
+              >
+            </li>
+          </ul>
+
+          <h3 class="font-semibold text-off-white mb-2 mt-6">
+            AI Advice Feature
+          </h3>
+          <p class="text-sm text-off-white/60 leading-relaxed mb-3">
+            When you request brewing advice from Professor Bean, the app uses a
+            tiered approach:
+          </p>
+          <ul
+            class="text-sm text-off-white/60 leading-relaxed list-disc pl-5 space-y-1.5 mb-3"
+          >
+            <li>
+              <strong class="text-off-white">OpenAI (Primary):</strong> When online,
+              your brew parameters (grind size, dose, yield, taste notes, etc.)
+              may be sent to OpenAI's API to generate personalized advice. No
+              personal information, account details, or device identifiers are
+              included — only the brewing data needed for the advice.
+            </li>
+            <li>
+              <strong class="text-off-white">Apple Intelligence (Fallback):</strong> On
+              supported devices, advice can be generated entirely on-device using
+              Apple Intelligence, with no data sent externally.
+            </li>
+            <li>
+              <strong class="text-off-white">Offline Mode:</strong> When offline,
+              rule-based advice is provided locally without any network requests.
+            </li>
+          </ul>
+          <p class="text-sm text-off-white/60 leading-relaxed mb-3">
+            Usage is limited to 5 OpenAI requests per day to manage costs. A
+            counter for this limit is stored securely in your device's Keychain
+            (this counter persists even if the app is deleted, but contains no
+            personal data).
+          </p>
+
+          <h3 class="font-semibold text-off-white mb-2 mt-6">
+            Regional Restrictions
+          </h3>
+          <p class="text-sm text-off-white/60 leading-relaxed">
+            In regions where OpenAI services are not available (including
+            mainland China), all AI-generated content is disabled. The app
+            detects your region automatically using your device's App Store
+            storefront and locale settings. In these regions, no brew data is
+            sent to any external AI service, and Professor Bean's advice feature
+            is not available. All other app features (brew logging, history,
+            timer, etc.) continue to work normally.
+          </p>
+        </div>
+
+        <!-- Data We Do NOT Collect -->
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-off-white mb-4">
+            Data We Do NOT Collect
+          </h2>
+          <ul
+            class="text-sm text-off-white/60 leading-relaxed list-disc pl-5 space-y-1.5"
+          >
+            <li>Personal identification (name, email, phone)</li>
+            <li>Device identifiers or advertising IDs</li>
+            <li>Usage analytics or telemetry</li>
+            <li>
+              Photos (any photos you take for brew cards stay on your device)
+            </li>
+            <li>Financial information</li>
+          </ul>
+        </div>
+
+        <!-- Summary Table -->
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-off-white mb-4">
+            Summary
+          </h2>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-white/10">
+                  <th
+                    class="text-left py-3 pr-4 text-golden-roast font-semibold"
+                    >Data Type</th
+                  >
+                  <th
+                    class="text-left py-3 pr-4 text-golden-roast font-semibold"
+                    >Collected</th
+                  >
+                  <th
+                    class="text-left py-3 pr-4 text-golden-roast font-semibold"
+                    >Stored</th
+                  >
+                  <th class="text-left py-3 text-golden-roast font-semibold"
+                    >Shared</th
+                  >
+                </tr>
+              </thead>
+              <tbody class="text-off-white/50">
+                <tr class="border-b border-white/5">
+                  <td class="py-3 pr-4 text-off-white/70">Brew records</td>
+                  <td class="py-3 pr-4">Yes (you enter it)</td>
+                  <td class="py-3 pr-4">On device only</td>
+                  <td class="py-3">No</td>
+                </tr>
+                <tr class="border-b border-white/5">
+                  <td class="py-3 pr-4 text-off-white/70">Location</td>
+                  <td class="py-3 pr-4">Only if enabled</td>
+                  <td class="py-3 pr-4">Never</td>
+                  <td class="py-3">WeatherAPI (temp.)</td>
+                </tr>
+                <tr class="border-b border-white/5">
+                  <td class="py-3 pr-4 text-off-white/70"
+                    >Brew params for AI</td
+                  >
+                  <td class="py-3 pr-4">When you request advice*</td>
+                  <td class="py-3 pr-4">On device only</td>
+                  <td class="py-3">OpenAI (when online)*</td>
+                </tr>
+                <tr class="border-b border-white/5">
+                  <td class="py-3 pr-4 text-off-white/70">Personal info</td>
+                  <td class="py-3 pr-4">No</td>
+                  <td class="py-3 pr-4">No</td>
+                  <td class="py-3">No</td>
+                </tr>
+                <tr>
+                  <td class="py-3 pr-4 text-off-white/70">Analytics</td>
+                  <td class="py-3 pr-4">No</td>
+                  <td class="py-3 pr-4">No</td>
+                  <td class="py-3">No</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="text-xs text-off-white/30 mt-3">
+              *AI features are disabled in regions where OpenAI is not available
+              (including mainland China). No data is sent to any external AI
+              service in these regions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Third-Party Services -->
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-off-white mb-4">
+            Third-Party Services
+          </h2>
+
+          <h3 class="font-semibold text-off-white mb-2 mt-6">OpenAI</h3>
+          <p class="text-sm text-off-white/60 leading-relaxed mb-2">
+            Used to generate Professor Bean's brewing advice when online.
+          </p>
+          <ul
+            class="text-sm text-off-white/60 leading-relaxed list-disc pl-5 space-y-1.5 mb-2"
+          >
+            <li>
+              Only brew parameters are sent (grind size, dose, yield, time, taste
+              notes)
+            </li>
+            <li>
+              No personal information, device IDs, or account details are
+              transmitted
+            </li>
+            <li>Requests are limited to 5 per day</li>
+          </ul>
+          <p class="text-sm text-off-white/60">
+            Privacy Policy: <a
+              href="https://openai.com/privacy"
+              class="text-golden-roast hover:underline"
+              target="_blank"
+              rel="noopener noreferrer">openai.com/privacy</a
+            >
+          </p>
+
+          <h3 class="font-semibold text-off-white mb-2 mt-6">
+            WeatherAPI.com
+          </h3>
+          <p class="text-sm text-off-white/60 leading-relaxed mb-2">
+            Used to fetch weather conditions when you enable weather auto-fill.
+          </p>
+          <p class="text-sm text-off-white/60">
+            Privacy Policy: <a
+              href="https://www.weatherapi.com/privacy.aspx"
+              class="text-golden-roast hover:underline"
+              target="_blank"
+              rel="noopener noreferrer">weatherapi.com/privacy.aspx</a
+            >
+          </p>
+
+          <h3 class="font-semibold text-off-white mb-2 mt-6">
+            Apple Intelligence (On-Device)
+          </h3>
+          <p class="text-sm text-off-white/60 leading-relaxed mb-2">
+            On supported devices, Professor Bean can generate advice using Apple
+            Intelligence as an alternative to OpenAI.
+          </p>
+          <ul
+            class="text-sm text-off-white/60 leading-relaxed list-disc pl-5 space-y-1.5"
+          >
+            <li>All AI processing happens locally on your iPhone</li>
+            <li>No brew data is sent to external servers</li>
+            <li>
+              Used as a fallback when OpenAI is unavailable or daily limit is
+              reached
+            </li>
+          </ul>
+        </div>
+
+        <!-- Data Storage & Security -->
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-off-white mb-4">
+            Data Storage & Security
+          </h2>
+          <ul
+            class="text-sm text-off-white/60 leading-relaxed list-disc pl-5 space-y-1.5"
+          >
+            <li>All brew data is stored locally on your device</li>
+            <li>
+              Data is protected by your device's built-in security (passcode,
+              Face ID, Touch ID)
+            </li>
+            <li>
+              We do not operate servers that store your personal data
+            </li>
+          </ul>
+        </div>
+
+        <!-- Your Rights -->
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-off-white mb-4">
+            Your Rights
+          </h2>
+          <p class="text-sm text-off-white/60 leading-relaxed mb-3">
+            You have full control over your data:
+          </p>
+          <ul
+            class="text-sm text-off-white/60 leading-relaxed list-disc pl-5 space-y-1.5"
+          >
+            <li>
+              <strong class="text-off-white">Access:</strong> All your data is visible
+              within the app
+            </li>
+            <li>
+              <strong class="text-off-white">Delete:</strong> Delete individual brews
+              or all data through the app
+            </li>
+            <li>
+              <strong class="text-off-white">Location:</strong> Revoke location permission
+              anytime in iOS Settings
+            </li>
+            <li>
+              <strong class="text-off-white">Export:</strong> Your data stays on your device
+              and can be backed up via iCloud
+            </li>
+          </ul>
+        </div>
+
+        <!-- Children's Privacy -->
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-off-white mb-4">
+            Children's Privacy
+          </h2>
+          <p class="text-sm text-off-white/60 leading-relaxed">
+            Prof Bean does not knowingly collect data from children under 13. The
+            app is designed for coffee enthusiasts of legal age to consume
+            caffeine.
+          </p>
+        </div>
+
+        <!-- Changes -->
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-off-white mb-4">
+            Changes to This Policy
+          </h2>
+          <p class="text-sm text-off-white/60 leading-relaxed">
+            We may update this privacy policy from time to time. We will notify
+            you of any changes by updating the "Last Updated" date at the top of
+            this policy.
+          </p>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h2 class="font-heading text-2xl font-bold text-off-white mb-4">
+            Contact Us
+          </h2>
+          <p class="text-sm text-off-white/60 leading-relaxed">
+            If you have questions about this privacy policy, please contact us
+            at:
+            <a
+              href="mailto:phc@profbean.com"
+              class="text-golden-roast hover:underline">phc@profbean.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 pt-8 mt-8 px-6">
+      <div
+        class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-off-white/30"
+      >
+        <p>&copy; 2026 Prof Bean. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="/support" class="hover:text-off-white/60 transition-colors"
+            >Support</a
+          >
+          <a
+            href="mailto:phc@profbean.com"
+            class="hover:text-off-white/60 transition-colors">Contact</a
+          >
+        </div>
+      </div>
+    </footer>
+  </main>
+</Layout>

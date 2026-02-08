@@ -10,7 +10,7 @@ import StoreBadges from "../components/StoreBadges.astro";
          SECTION 1: HERO (Dark)
          ═══════════════════════════════════════════════════════ -->
     <section
-      class="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-espresso-black overflow-hidden"
+      class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-20 bg-espresso-black overflow-hidden"
     >
       <!-- Floating coffee beans background -->
       <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
@@ -47,53 +47,28 @@ import StoreBadges from "../components/StoreBadges.astro";
         <h1
           class="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-off-white leading-[1.05]"
         >
-          Meet<br />
+          Log. Learn.<br />
           <span
             class="bg-gradient-to-r from-golden-roast to-latte-foam bg-clip-text text-transparent"
           >
-            Professor Bean
+            Brew better.
           </span>
         </h1>
-        <p class="mt-5 text-lg sm:text-xl text-off-white/60 max-w-md mx-auto">
-          Your AI coffee mentor — personalized advice for every brew.
+        <p class="mt-5 text-lg sm:text-xl text-off-white/60 max-w-lg mx-auto">
+          Prof Bean tracks your coffee and serves up brew-specific tips from
+          Professor Bean — so every cup gets closer to perfect.
         </p>
       </div>
 
-      <!-- Phone mockup with parallax -->
+      <!-- Phone mockup with parallax — Prof's Advice screen -->
       <div class="relative z-10 parallax-phone" data-speed="0.15">
         <PhoneMockup>
-          <div
-            class="w-full h-full bg-gradient-to-br from-espresso-black via-brew-brown to-golden-roast flex flex-col items-center justify-center p-6"
-          >
-            <!-- Fake chat UI inside phone -->
-            <div class="w-full space-y-3">
-              <div class="bg-white/10 rounded-2xl rounded-tl-sm p-3 max-w-[85%]">
-                <p class="text-[11px] text-off-white/90 leading-snug">
-                  Try grinding two clicks finer and pulling at 93&deg;C. Your 1:2.2 ratio is
-                  solid — the sweetness will pop.
-                </p>
-              </div>
-              <div class="bg-golden-roast/30 rounded-2xl rounded-br-sm p-3 max-w-[70%] ml-auto">
-                <p class="text-[11px] text-off-white/80 leading-snug">
-                  What about bloom time?
-                </p>
-              </div>
-              <div class="bg-white/10 rounded-2xl rounded-tl-sm p-3 max-w-[85%]">
-                <p class="text-[11px] text-off-white/90 leading-snug">
-                  Extend to 45s with a gentle swirl. Your V60 will thank you.
-                </p>
-              </div>
-            </div>
-            <!-- Professor Bean avatar -->
-            <div class="mt-4 flex items-center gap-2">
-              <div
-                class="w-8 h-8 rounded-full bg-golden-roast flex items-center justify-center text-sm"
-              >
-                &#x1F393;
-              </div>
-              <span class="text-[10px] text-off-white/50 font-medium">Professor Bean</span>
-            </div>
-          </div>
+          <img
+            src="/screens/hero-advice.webp"
+            alt="Professor Bean giving brew-specific advice in the Prof Bean app"
+            class="w-full h-full object-cover object-top"
+            loading="eager"
+          />
         </PhoneMockup>
       </div>
 
@@ -122,61 +97,154 @@ import StoreBadges from "../components/StoreBadges.astro";
     </section>
 
     <!-- ═══════════════════════════════════════════════════════
-         SECTION 2: WHAT IS PROFESSOR BEAN? (Light/Cream)
+         SECTION 2: WHAT IS IT? (Light/Cream)
          ═══════════════════════════════════════════════════════ -->
     <section class="relative bg-warm-cream py-24 sm:py-32 px-6 overflow-hidden">
       <div class="max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <!-- Text -->
-          <div>
-            <h2
-              class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-dark-espresso leading-tight"
-            >
-              Coffee advice that<br />
-              <span class="text-brew-brown italic">actually knows your setup</span>
-            </h2>
-            <p class="mt-6 text-base sm:text-lg text-dark-espresso/70 leading-relaxed">
-              Professor Bean analyzes your brew logs — your grinder, your ratios, your water
-              temperature — and gives advice tailored to exactly how <em>you</em> make coffee.
-              No generic tips. Just what works for your gear and taste.
-            </p>
+        <div class="text-center mb-16">
+          <h2
+            class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-dark-espresso leading-tight"
+          >
+            Log what you can measure.<br />
+            <span class="text-brew-brown italic">Get tips you can taste.</span>
+          </h2>
+          <p class="mt-6 text-base sm:text-lg text-dark-espresso/70 leading-relaxed max-w-2xl mx-auto">
+            After each brew, Professor Bean reads your numbers and gives you one clear,
+            actionable tip. Not a chatbot — just brew-specific guidance based on exactly
+            what you logged.
+          </p>
+        </div>
+
+        <!-- Two Brew Details cards side by side -->
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- Card 1: Critical advice with suggested changes -->
+          <div class="parallax-element" data-speed="-0.06">
+            <div class="bg-espresso-black rounded-2xl shadow-xl overflow-hidden">
+              <!-- Brew header -->
+              <div class="p-5 pb-3">
+                <h3 class="text-lg font-bold text-off-white">Luxe Blend</h3>
+                <div class="flex items-center gap-3 mt-1 text-[11px] text-off-white/40">
+                  <span>Espresso</span>
+                  <span>7 Feb 2026 at 8:06 am</span>
+                </div>
+              </div>
+              <!-- Advice section -->
+              <div class="px-5 pb-2">
+                <p class="text-[11px] text-golden-roast/70 font-medium mb-2">
+                  Professor Bean's Advice
+                </p>
+                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                  <div class="flex items-center gap-3 mb-3">
+                    <img
+                      src="/screens/pb_mmm_okay.webp"
+                      alt="Professor Bean thinking"
+                      class="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <span class="text-[11px] text-golden-roast font-medium block"
+                        >Professor Bean, PhC says:</span
+                      >
+                      <span class="text-[9px] text-off-white/30">1 day, 12 hrs</span>
+                    </div>
+                  </div>
+                  <p class="text-[12px] text-off-white/80 leading-relaxed">
+                    This brew is flirting with sour grounds; heat up the brew to coax sweeter
+                    extraction. Maintain the same dose and time, but push the temperature to
+                    90&deg;C.
+                  </p>
+                  <!-- Suggested changes -->
+                  <div class="mt-3 pt-3 border-t border-white/5">
+                    <p class="text-[9px] text-golden-roast/60 font-semibold tracking-wider uppercase mb-1.5">
+                      Suggested Changes
+                    </p>
+                    <div class="flex justify-between items-center text-[11px]">
+                      <span class="text-off-white/50">Brew Temp</span>
+                      <div class="flex items-center gap-1.5">
+                        <span class="text-off-white/30">93&deg;C</span>
+                        <span class="text-off-white/20">&rarr;</span>
+                        <span class="text-golden-roast font-medium">91&deg;C</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Brew Settings -->
+              <div class="px-5 pt-3 pb-5">
+                <p class="text-[11px] text-off-white/40 font-medium mb-2">Brew Settings</p>
+                <div class="bg-white/5 rounded-xl divide-y divide-white/5">
+                  <div class="flex justify-between items-center px-3.5 py-2.5">
+                    <span class="text-[11px] text-off-white/50">Brew Temp</span>
+                    <span class="text-[12px] text-golden-roast font-medium">93 <span class="text-off-white/30 text-[10px]">&deg;C</span></span>
+                  </div>
+                  <div class="flex justify-between items-center px-3.5 py-2.5">
+                    <span class="text-[11px] text-off-white/50">Brew Time</span>
+                    <span class="text-[12px] text-golden-roast font-medium">00:32 <span class="text-off-white/30 text-[10px]">mm:ss</span></span>
+                  </div>
+                  <div class="flex justify-between items-center px-3.5 py-2.5">
+                    <span class="text-[11px] text-off-white/50">Dose</span>
+                    <span class="text-[12px] text-golden-roast font-medium">18.1 <span class="text-off-white/30 text-[10px]">g</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Chat bubble mockup -->
-          <div class="relative" aria-label="Example Professor Bean conversation">
-            <div class="parallax-element" data-speed="-0.08">
-              <!-- Incoming bubble -->
-              <div class="bg-white rounded-2xl rounded-tl-sm shadow-lg p-5 mb-4 max-w-sm">
-                <div class="flex items-center gap-2 mb-3">
-                  <div
-                    class="w-7 h-7 rounded-full bg-golden-roast flex items-center justify-center text-xs"
-                  >
-                    &#x1F393;
-                  </div>
-                  <span class="text-xs font-medium text-dark-espresso/60">Professor Bean</span>
+          <!-- Card 2: Positive praise, no changes needed -->
+          <div class="parallax-element" data-speed="0.06">
+            <div class="bg-espresso-black rounded-2xl shadow-xl overflow-hidden">
+              <!-- Brew header -->
+              <div class="p-5 pb-3">
+                <h3 class="text-lg font-bold text-off-white">Luxe Blend</h3>
+                <div class="flex items-center gap-3 mt-1 text-[11px] text-off-white/40">
+                  <span>Espresso</span>
+                  <span>7 Feb 2026 at 7:24 am</span>
                 </div>
-                <p class="text-sm text-dark-espresso/80 leading-relaxed">
-                  Your last three espressos were slightly under-extracted. Try bumping your
-                  temperature to 94&deg;C and extending your pre-infusion by 3 seconds. Based
-                  on your grind setting, this should bring out more sweetness.
+              </div>
+              <!-- Advice section -->
+              <div class="px-5 pb-2">
+                <p class="text-[11px] text-golden-roast/70 font-medium mb-2">
+                  Professor Bean's Advice
                 </p>
+                <div class="bg-white/5 rounded-xl p-4 border border-white/5">
+                  <div class="flex items-center gap-3 mb-3">
+                    <img
+                      src="/screens/pb_proud.webp"
+                      alt="Professor Bean proud"
+                      class="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <span class="text-[11px] text-golden-roast font-medium block"
+                        >Professor Bean, PhC says:</span
+                      >
+                      <span class="text-[9px] text-off-white/30">1 day, 13 hrs</span>
+                    </div>
+                  </div>
+                  <p class="text-[12px] text-off-white/80 leading-relaxed">
+                    This brew is showing off its crema like a high-class ambassador; you've
+                    brewed a grounds-for-pudding balance — now let it nap and repeat with the
+                    same shot of devotion. Keep the ritual precise and don't chase shadows, or
+                    you'll over-extract and become depresso.
+                  </p>
+                </div>
               </div>
-            </div>
-
-            <div class="parallax-element" data-speed="0.05">
-              <!-- Outgoing bubble -->
-              <div
-                class="bg-brew-brown/10 rounded-2xl rounded-br-sm shadow-md p-4 max-w-[70%] ml-auto"
-              >
-                <p class="text-sm text-dark-espresso/70">Thanks! Should I adjust dose too?</p>
+              <!-- Brew Settings -->
+              <div class="px-5 pt-3 pb-5">
+                <p class="text-[11px] text-off-white/40 font-medium mb-2">Brew Settings</p>
+                <div class="bg-white/5 rounded-xl divide-y divide-white/5">
+                  <div class="flex justify-between items-center px-3.5 py-2.5">
+                    <span class="text-[11px] text-off-white/50">Brew Temp</span>
+                    <span class="text-[12px] text-golden-roast font-medium">93 <span class="text-off-white/30 text-[10px]">&deg;C</span></span>
+                  </div>
+                  <div class="flex justify-between items-center px-3.5 py-2.5">
+                    <span class="text-[11px] text-off-white/50">Brew Time</span>
+                    <span class="text-[12px] text-golden-roast font-medium">00:35 <span class="text-off-white/30 text-[10px]">mm:ss</span></span>
+                  </div>
+                  <div class="flex justify-between items-center px-3.5 py-2.5">
+                    <span class="text-[11px] text-off-white/50">Dose</span>
+                    <span class="text-[12px] text-golden-roast font-medium">18.1 <span class="text-off-white/30 text-[10px]">g</span></span>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <!-- Decorative accent -->
-            <div
-              class="absolute -top-4 -right-4 w-20 h-20 bg-golden-roast/10 rounded-full blur-xl"
-              aria-hidden="true"
-            >
             </div>
           </div>
         </div>
@@ -184,7 +252,7 @@ import StoreBadges from "../components/StoreBadges.astro";
     </section>
 
     <!-- ═══════════════════════════════════════════════════════
-         SECTION 3: BENEFITS (Dark)
+         SECTION 3: FEATURES (Dark)
          ═══════════════════════════════════════════════════════ -->
     <section class="relative bg-espresso-black py-24 sm:py-32 px-6 overflow-hidden">
       <!-- Subtle glow -->
@@ -198,96 +266,114 @@ import StoreBadges from "../components/StoreBadges.astro";
         <h2
           class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-center text-off-white mb-16 leading-tight"
         >
-          Brew better,<br />
+          Everything you need,<br />
           <span
             class="bg-gradient-to-r from-golden-roast to-latte-foam bg-clip-text text-transparent"
           >
-            every single cup
+            nothing you don't
           </span>
         </h2>
 
-        <div class="grid sm:grid-cols-3 gap-8 sm:gap-10">
-          <!-- Benefit 1 -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
+          <!-- Feature 1: Log What Matters -->
           <div class="group text-center">
-            <div
-              class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-golden-roast/10 border border-golden-roast/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-            >
-              <svg
-                class="w-7 h-7 text-golden-roast"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"
-                ></path>
-              </svg>
-            </div>
+            <img
+              src="/screens/feat-log.png"
+              alt="Professor Bean examining a cup of espresso with a magnifying glass"
+              class="w-24 h-24 mx-auto mb-5 rounded-2xl group-hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
             <h3 class="font-heading text-xl font-semibold text-off-white mb-2">
-              Personalized Advice
+              Log What Matters
             </h3>
             <p class="text-sm text-off-white/50 leading-relaxed">
-              Tailored to your brew method, grinder, beans, and preferences. Not
-              one-size-fits-all — it's <em>your</em> coffee coach.
+              Toggle fields on or off per method. Track the full workflow or just the basics
+              — it's your call.
             </p>
           </div>
 
-          <!-- Benefit 2 -->
+          <!-- Feature 2: Time Your Shot -->
           <div class="group text-center">
-            <div
-              class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-golden-roast/10 border border-golden-roast/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-            >
-              <svg
-                class="w-7 h-7 text-golden-roast"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
-                ></path>
-              </svg>
-            </div>
+            <img
+              src="/screens/feat-timer.png"
+              alt="Professor Bean checking his Apple Watch timer"
+              class="w-24 h-24 mx-auto mb-5 rounded-2xl group-hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
             <h3 class="font-heading text-xl font-semibold text-off-white mb-2">
-              Learn as You Brew
+              Time Your Shot
             </h3>
             <p class="text-sm text-off-white/50 leading-relaxed">
-              Tips get smarter with every log. Track trends and see what's actually moving the
-              needle for your taste.
+              Built-in timer tracks pre-infusion and total time. Works on iPhone and Apple Watch
+              — hands-free.
             </p>
           </div>
 
-          <!-- Benefit 3 -->
+          <!-- Feature 3: Brew-Specific Tips -->
           <div class="group text-center">
-            <div
-              class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-golden-roast/10 border border-golden-roast/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-            >
-              <svg
-                class="w-7 h-7 text-golden-roast"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="1.5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
-                ></path>
-              </svg>
-            </div>
+            <img
+              src="/screens/feat-tips.png"
+              alt="Professor Bean holding an espresso cup and a glass of coffee"
+              class="w-24 h-24 mx-auto mb-5 rounded-2xl group-hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
             <h3 class="font-heading text-xl font-semibold text-off-white mb-2">
-              Share Your Wins
+              Brew-Specific Tips
             </h3>
             <p class="text-sm text-off-white/50 leading-relaxed">
-              Generate beautiful brew cards with your recipe and Professor Bean's take. Share
-              with fellow coffee nerds.
+              Professor Bean reads your brew data and gives you one actionable tip to dial in your
+              next shot. Clear guidance, not generic advice.
+            </p>
+          </div>
+
+          <!-- Feature 4: Every Method -->
+          <div class="group text-center">
+            <img
+              src="/screens/feat-methods.png"
+              alt="Professor Bean surrounded by various brewing equipment"
+              class="w-24 h-24 mx-auto mb-5 rounded-2xl group-hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+            <h3 class="font-heading text-xl font-semibold text-off-white mb-2">
+              Every Method
+            </h3>
+            <p class="text-sm text-off-white/50 leading-relaxed">
+              Espresso, pour over, AeroPress, French press, moka pot, cold brew. One app with
+              tailored presets for each.
+            </p>
+          </div>
+
+          <!-- Feature 5: Brew History -->
+          <div class="group text-center">
+            <img
+              src="/screens/feat-history.png"
+              alt="Professor Bean with a photo album of coffee drinks"
+              class="w-24 h-24 mx-auto mb-5 rounded-2xl group-hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+            <h3 class="font-heading text-xl font-semibold text-off-white mb-2">
+              Brew History
+            </h3>
+            <p class="text-sm text-off-white/50 leading-relaxed">
+              Search and browse your full brew log. Find what worked, filter by method, and
+              repeat your best results.
+            </p>
+          </div>
+
+          <!-- Feature 6: Share Brew Cards -->
+          <div class="group text-center">
+            <img
+              src="/screens/feat-share.png"
+              alt="Professor Bean making a heart gesture with his hands"
+              class="w-24 h-24 mx-auto mb-5 rounded-2xl group-hover:scale-110 transition-transform duration-300"
+              loading="lazy"
+            />
+            <h3 class="font-heading text-xl font-semibold text-off-white mb-2">
+              Share Brew Cards
+            </h3>
+            <p class="text-sm text-off-white/50 leading-relaxed">
+              Export a beautiful card with your photo, recipe, and Prof's notes. Share your
+              best shots with fellow coffee nerds.
             </p>
           </div>
         </div>
@@ -311,42 +397,12 @@ import StoreBadges from "../components/StoreBadges.astro";
           <div class="text-center">
             <div class="parallax-element mx-auto mb-8" data-speed="0.1">
               <PhoneMockup class="mx-auto scale-[0.85]">
-                <div
-                  class="w-full h-full bg-gradient-to-b from-espresso-black to-dark-espresso flex flex-col p-5 pt-12"
-                >
-                  <div class="text-[10px] text-off-white/40 mb-2">NEW BREW</div>
-                  <div class="space-y-2.5">
-                    <div class="flex justify-between items-center">
-                      <span class="text-[11px] text-off-white/60">Dose</span>
-                      <span class="text-[11px] text-golden-roast font-medium">18.0g</span>
-                    </div>
-                    <div class="h-px bg-white/5"></div>
-                    <div class="flex justify-between items-center">
-                      <span class="text-[11px] text-off-white/60">Yield</span>
-                      <span class="text-[11px] text-golden-roast font-medium">36.0g</span>
-                    </div>
-                    <div class="h-px bg-white/5"></div>
-                    <div class="flex justify-between items-center">
-                      <span class="text-[11px] text-off-white/60">Time</span>
-                      <span class="text-[11px] text-golden-roast font-medium">28s</span>
-                    </div>
-                    <div class="h-px bg-white/5"></div>
-                    <div class="flex justify-between items-center">
-                      <span class="text-[11px] text-off-white/60">Temperature</span>
-                      <span class="text-[11px] text-golden-roast font-medium">93&deg;C</span>
-                    </div>
-                    <div class="h-px bg-white/5"></div>
-                    <div class="flex justify-between items-center">
-                      <span class="text-[11px] text-off-white/60">Grind</span>
-                      <span class="text-[11px] text-golden-roast font-medium">15</span>
-                    </div>
-                  </div>
-                  <div
-                    class="mt-auto bg-golden-roast rounded-xl py-2.5 text-center text-[11px] font-medium text-espresso-black"
-                  >
-                    Save Brew
-                  </div>
-                </div>
+                <img
+                  src="/screens/step-log.webp"
+                  alt="New Brew screen with Quick Entry fields for dose, yield, and brew time"
+                  class="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
               </PhoneMockup>
             </div>
             <div
@@ -356,40 +412,20 @@ import StoreBadges from "../components/StoreBadges.astro";
             </div>
             <h3 class="font-heading text-xl font-semibold text-dark-espresso mb-1">Log</h3>
             <p class="text-sm text-dark-espresso/60">
-              Record your brew with the fields that matter to you.
+              Record your brew with the fields that matter to your method.
             </p>
           </div>
 
-          <!-- Step 2: Ask -->
+          <!-- Step 2: Get Tips -->
           <div class="text-center">
             <div class="parallax-element mx-auto mb-8" data-speed="-0.06">
               <PhoneMockup class="mx-auto scale-[0.85]">
-                <div
-                  class="w-full h-full bg-gradient-to-b from-espresso-black to-dark-espresso flex flex-col p-5 pt-12"
-                >
-                  <div class="text-[10px] text-off-white/40 mb-3">PROFESSOR BEAN</div>
-                  <div class="space-y-3 flex-1">
-                    <div class="bg-white/10 rounded-xl rounded-tl-sm p-3">
-                      <p class="text-[10px] text-off-white/80 leading-snug">
-                        Nice shot! Your ratio of 1:2 is classic but try 1:2.2 for more
-                        sweetness from this light roast.
-                      </p>
-                    </div>
-                    <div
-                      class="bg-golden-roast/20 rounded-xl rounded-br-sm p-3 ml-auto max-w-[80%]"
-                    >
-                      <p class="text-[10px] text-off-white/70 leading-snug">
-                        How about grind?
-                      </p>
-                    </div>
-                    <div class="bg-white/10 rounded-xl rounded-tl-sm p-3">
-                      <p class="text-[10px] text-off-white/80 leading-snug">
-                        Go 1 click finer. With 28s at 93&deg;C, a finer grind will balance the
-                        acidity nicely.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src="/screens/step-tips.webp"
+                  alt="Brew Details showing Professor Bean's advice with brew settings"
+                  class="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
               </PhoneMockup>
             </div>
             <div
@@ -397,52 +433,22 @@ import StoreBadges from "../components/StoreBadges.astro";
             >
               2
             </div>
-            <h3 class="font-heading text-xl font-semibold text-dark-espresso mb-1">Ask</h3>
+            <h3 class="font-heading text-xl font-semibold text-dark-espresso mb-1">Get Tips</h3>
             <p class="text-sm text-dark-espresso/60">
-              Get Professor Bean's take — specific to your gear and taste.
+              Professor Bean reads your data and tells you exactly what to adjust.
             </p>
           </div>
 
-          <!-- Step 3: Improve -->
+          <!-- Step 3: Repeat -->
           <div class="text-center">
             <div class="parallax-element mx-auto mb-8" data-speed="0.08">
               <PhoneMockup class="mx-auto scale-[0.85]">
-                <div
-                  class="w-full h-full bg-gradient-to-b from-espresso-black to-dark-espresso flex flex-col p-5 pt-12"
-                >
-                  <div class="text-[10px] text-off-white/40 mb-3">TRENDS</div>
-                  <!-- Mini chart -->
-                  <div class="flex-1 flex flex-col justify-center">
-                    <div class="flex items-end gap-1.5 h-24 mb-3">
-                      <div class="flex-1 bg-brew-brown/40 rounded-t" style="height: 40%"></div>
-                      <div class="flex-1 bg-brew-brown/50 rounded-t" style="height: 55%"></div>
-                      <div class="flex-1 bg-brew-brown/40 rounded-t" style="height: 45%"></div>
-                      <div class="flex-1 bg-brew-brown/60 rounded-t" style="height: 65%"></div>
-                      <div class="flex-1 bg-golden-roast/70 rounded-t" style="height: 75%"></div>
-                      <div class="flex-1 bg-golden-roast/80 rounded-t" style="height: 80%"></div>
-                      <div class="flex-1 bg-golden-roast rounded-t" style="height: 90%"></div>
-                    </div>
-                    <div class="text-center">
-                      <div class="text-[18px] font-bold text-golden-roast">4.5</div>
-                      <div class="text-[9px] text-off-white/40">avg rating this week</div>
-                    </div>
-                    <div class="flex items-center justify-center gap-1 mt-2">
-                      <svg
-                        class="w-3 h-3 text-green-400"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-                      </svg>
-                      <span class="text-[10px] text-green-400">+0.8 from last week</span>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src="/screens/step-repeat.webp"
+                  alt="My Brews history showing logged brews with ratios and thumbs up/down"
+                  class="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
               </PhoneMockup>
             </div>
             <div
@@ -450,9 +456,9 @@ import StoreBadges from "../components/StoreBadges.astro";
             >
               3
             </div>
-            <h3 class="font-heading text-xl font-semibold text-dark-espresso mb-1">Improve</h3>
+            <h3 class="font-heading text-xl font-semibold text-dark-espresso mb-1">Repeat</h3>
             <p class="text-sm text-dark-espresso/60">
-              Watch your ratings climb as you dial in your perfect cup.
+              Browse your history, find what worked, and repeat your best brews.
             </p>
           </div>
         </div>
@@ -482,7 +488,7 @@ import StoreBadges from "../components/StoreBadges.astro";
           </span>
         </h2>
         <p class="text-base sm:text-lg text-off-white/50 mb-10 max-w-md mx-auto">
-          Download BrewGPT and let Professor Bean guide your next cup.
+          Download Prof Bean and let Professor Bean guide your next cup.
         </p>
 
         <StoreBadges class="mb-16" />
@@ -493,12 +499,12 @@ import StoreBadges from "../components/StoreBadges.astro";
         <div
           class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-off-white/30"
         >
-          <p>&copy; 2026 BrewGPT. All rights reserved.</p>
+          <p>&copy; 2026 Prof Bean. All rights reserved.</p>
           <div class="flex items-center gap-6">
-            <a href="#" class="hover:text-off-white/60 transition-colors">Privacy</a>
-            <a href="#" class="hover:text-off-white/60 transition-colors">Terms</a>
+            <a href="/privacy" class="hover:text-off-white/60 transition-colors">Privacy</a>
+            <a href="/support" class="hover:text-off-white/60 transition-colors">Support</a>
             <a
-              href="mailto:hello@brewgpt.app"
+              href="mailto:phc@profbean.com"
               class="hover:text-off-white/60 transition-colors">Contact</a
             >
           </div>

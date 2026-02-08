@@ -1,0 +1,58 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<nav
+  class:list={[
+    "fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-espresso-black/80 border-b border-white/5",
+    className,
+  ]}
+>
+  <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 group">
+      <img src="/app-icon.webp" alt="" class="w-7 h-7 rounded-lg" />
+      <span class="font-heading font-bold text-off-white group-hover:text-golden-roast transition-colors"
+        >Prof Bean</span
+      >
+    </a>
+
+    <div class="flex items-center gap-6 text-sm">
+      <a
+        href="/"
+        class:list={[
+          "transition-colors",
+          currentPath === "/" ? "text-golden-roast" : "text-off-white/50 hover:text-off-white/80",
+        ]}
+      >
+        Home
+      </a>
+      <a
+        href="/connected-gear"
+        class:list={[
+          "transition-colors",
+          currentPath === "/connected-gear" || currentPath === "/connected-gear/"
+            ? "text-golden-roast"
+            : "text-off-white/50 hover:text-off-white/80",
+        ]}
+      >
+        Connected Gear
+      </a>
+      <a
+        href="/support"
+        class:list={[
+          "transition-colors",
+          currentPath === "/support" || currentPath === "/support/" || currentPath === "/privacy" || currentPath === "/privacy/"
+            ? "text-golden-roast"
+            : "text-off-white/50 hover:text-off-white/80",
+        ]}
+      >
+        Support
+      </a>
+    </div>
+  </div>
+</nav>

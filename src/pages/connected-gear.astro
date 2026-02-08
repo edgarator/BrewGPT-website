@@ -1,0 +1,327 @@
+---
+import Layout from "../layouts/Layout.astro";
+import StoreBadges from "../components/StoreBadges.astro";
+---
+
+<Layout
+  title="Connected Gear — Prof Bean"
+  description="Prof Bean connects to your favorite coffee scales via Bluetooth. See supported devices and setup tutorials."
+>
+  <div class="parallax-container">
+    <!-- ═══════════════════════════════════════════════════════
+         HERO (Dark)
+         ═══════════════════════════════════════════════════════ -->
+    <section
+      class="relative bg-espresso-black pt-32 pb-20 px-6 overflow-hidden"
+    >
+      <!-- Glow -->
+      <div
+        class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brew-brown/6 rounded-full blur-[120px]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="relative z-10 max-w-3xl mx-auto text-center">
+        <p class="text-sm font-medium text-golden-roast/80 tracking-widest uppercase mb-4">
+          Connected Gear
+        </p>
+        <h1
+          class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-off-white leading-tight"
+        >
+          Your scale,<br />
+          <span
+            class="bg-gradient-to-r from-golden-roast to-latte-foam bg-clip-text text-transparent"
+          >
+            talking to your app
+          </span>
+        </h1>
+        <p class="mt-5 text-base sm:text-lg text-off-white/50 max-w-lg mx-auto">
+          Prof Bean connects to Bluetooth coffee scales so your dose and yield log
+          themselves. Less typing, more brewing.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SUPPORTED DEVICES (Light/Cream)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative bg-warm-cream py-20 sm:py-28 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2
+          class="font-heading text-2xl sm:text-3xl font-bold text-dark-espresso text-center mb-14"
+        >
+          Supported Scales
+        </h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Bookoo Thermis Ultra -->
+          <div
+            class="bg-white rounded-2xl shadow-md border border-dark-espresso/5 p-6 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-20 h-20 rounded-2xl bg-gradient-to-br from-dark-espresso to-brew-brown flex items-center justify-center mb-5"
+            >
+              <svg
+                class="w-10 h-10 text-golden-roast"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-lg font-semibold text-dark-espresso mb-1">
+              Bookoo Thermis Ultra
+            </h3>
+            <p class="text-sm text-dark-espresso/50 mb-3">
+              Precision scale with built-in thermometer. Auto-logs dose, yield, and water temp.
+            </p>
+            <span
+              class="inline-block text-[11px] font-medium text-green-700 bg-green-100 px-2.5 py-0.5 rounded-full"
+            >
+              Supported
+            </span>
+          </div>
+
+          <!-- Bookoo Thermis Mini -->
+          <div
+            class="bg-white rounded-2xl shadow-md border border-dark-espresso/5 p-6 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-20 h-20 rounded-2xl bg-gradient-to-br from-dark-espresso to-brew-brown flex items-center justify-center mb-5"
+            >
+              <svg
+                class="w-10 h-10 text-golden-roast"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-lg font-semibold text-dark-espresso mb-1">
+              Bookoo Thermis Mini
+            </h3>
+            <p class="text-sm text-dark-espresso/50 mb-3">
+              Compact Bluetooth scale with temperature sensing. Perfect for travel and daily use.
+            </p>
+            <span
+              class="inline-block text-[11px] font-medium text-green-700 bg-green-100 px-2.5 py-0.5 rounded-full"
+            >
+              Supported
+            </span>
+          </div>
+
+          <!-- Skale -->
+          <div
+            class="bg-white rounded-2xl shadow-md border border-dark-espresso/5 p-6 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="w-20 h-20 rounded-2xl bg-gradient-to-br from-dark-espresso to-brew-brown flex items-center justify-center mb-5"
+            >
+              <svg
+                class="w-10 h-10 text-golden-roast"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-lg font-semibold text-dark-espresso mb-1">
+              Skale
+            </h3>
+            <p class="text-sm text-dark-espresso/50 mb-3">
+              High-precision Bluetooth espresso scale. Streams weight data directly to Prof Bean.
+            </p>
+            <span
+              class="inline-block text-[11px] font-medium text-green-700 bg-green-100 px-2.5 py-0.5 rounded-full"
+            >
+              Supported
+            </span>
+          </div>
+        </div>
+
+        <!-- Coming Soon -->
+        <div class="mt-12 text-center">
+          <h3
+            class="font-heading text-lg font-semibold text-dark-espresso/60 mb-6"
+          >
+            Coming Soon
+          </h3>
+          <div class="inline-flex items-center gap-4">
+            <div
+              class="bg-white rounded-xl shadow-sm border border-dark-espresso/5 px-6 py-4 flex flex-col items-center"
+            >
+              <div
+                class="w-14 h-14 rounded-xl bg-dark-espresso/5 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-7 h-7 text-dark-espresso/30"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="font-heading text-sm font-semibold text-dark-espresso/50">DiFluid</span>
+              <span
+                class="mt-1 inline-block text-[10px] font-medium text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full"
+              >
+                Coming Soon
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SETUP TUTORIALS (Dark)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative bg-espresso-black py-20 sm:py-28 px-6 overflow-hidden">
+      <!-- Glow -->
+      <div
+        class="absolute top-0 left-1/4 w-[400px] h-[400px] bg-brew-brown/5 rounded-full blur-[100px]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto">
+        <div class="text-center mb-14">
+          <h2
+            class="font-heading text-3xl sm:text-4xl font-bold text-off-white mb-3"
+          >
+            Setup Tutorials
+          </h2>
+          <p class="text-base text-off-white/40 max-w-lg mx-auto">
+            Get connected in under a minute. Watch the step-by-step guides for your scale.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Video 1: Bookoo Thermis Ultra -->
+          <div class="group">
+            <div
+              class="aspect-video rounded-xl overflow-hidden border border-white/10 bg-dark-espresso mb-4"
+            >
+              <iframe
+                src="https://www.youtube.com/embed/0Ab-MJ_ZARo"
+                title="How to Connect the Bookoo Thermis Ultra to Prof Bean"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy"
+                class="w-full h-full"></iframe>
+            </div>
+            <h3 class="font-heading text-base font-semibold text-off-white mb-1">
+              Bookoo Thermis Ultra
+            </h3>
+            <p class="text-sm text-off-white/40">
+              Bluetooth setup tutorial
+            </p>
+          </div>
+
+          <!-- Video 2: Bookoo Thermis Mini -->
+          <div class="group">
+            <div
+              class="aspect-video rounded-xl overflow-hidden border border-white/10 bg-dark-espresso mb-4"
+            >
+              <iframe
+                src="https://www.youtube.com/embed/Qmz6ZMJSEK8"
+                title="How to Connect the Bookoo Thermis Mini to Prof Bean"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy"
+                class="w-full h-full"></iframe>
+            </div>
+            <h3 class="font-heading text-base font-semibold text-off-white mb-1">
+              Bookoo Thermis Mini
+            </h3>
+            <p class="text-sm text-off-white/40">
+              Bluetooth pairing guide
+            </p>
+          </div>
+
+          <!-- Video 3: Skale -->
+          <div class="group">
+            <div
+              class="aspect-video rounded-xl overflow-hidden border border-white/10 bg-dark-espresso mb-4"
+            >
+              <iframe
+                src="https://www.youtube.com/embed/aFu4Ks0KS88"
+                title="How to Connect the Skale Scale to Prof Bean"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy"
+                class="w-full h-full"></iframe>
+            </div>
+            <h3 class="font-heading text-base font-semibold text-off-white mb-1">
+              Skale
+            </h3>
+            <p class="text-sm text-off-white/40">
+              Step-by-step connection tutorial
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CTA (Light/Cream)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative bg-warm-cream py-20 sm:py-24 px-6">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2
+          class="font-heading text-3xl sm:text-4xl font-bold text-dark-espresso mb-4"
+        >
+          Ready to connect?
+        </h2>
+        <p class="text-base text-dark-espresso/50 mb-8 max-w-md mx-auto">
+          Download Prof Bean, pair your scale, and start logging hands-free.
+        </p>
+        <StoreBadges />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-espresso-black border-t border-white/5 py-8 px-6">
+      <div
+        class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-off-white/30"
+      >
+        <p>&copy; 2026 Prof Bean. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="/privacy" class="hover:text-off-white/60 transition-colors">Privacy</a>
+          <a href="/support" class="hover:text-off-white/60 transition-colors">Support</a>
+          <a
+            href="mailto:phc@profbean.com"
+            class="hover:text-off-white/60 transition-colors">Contact</a
+          >
+        </div>
+      </div>
+    </footer>
+  </div>
+</Layout>
