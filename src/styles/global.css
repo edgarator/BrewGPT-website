@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* Fraunces — wonky, professorial serif for headings */
+@font-face {
+  font-family: "Fraunces";
+  src: url("https://fonts.gstatic.com/s/fraunces/v32/6NUh8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0K7iN7hzFUPJH58nk.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("https://fonts.gstatic.com/s/fraunces/v32/6NVf8FyLNQOQZAnv9ZwNjucMHVn85Ni7emAe9lKqZTnbB-gzTK0K1ChJdt9vIVYX9G37lvk.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Satoshi — clean, modern sans for body */
+@font-face {
+  font-family: "Satoshi";
+  src: url("https://api.fontshare.com/v2/css/f/satoshi@400,500,700/Satoshi-Variable.woff2")
+    format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Colors */
+  --color-espresso-black: #1a1209;
+  --color-brew-brown: #8b633b;
+  --color-golden-roast: #c18742;
+  --color-warm-cream: #faf7f2;
+  --color-latte-foam: #f4ddb2;
+  --color-off-white: #fff8f0;
+  --color-dark-espresso: #2c1810;
+
+  /* Fonts */
+  --font-heading: "Fraunces", Georgia, serif;
+  --font-body: "Satoshi", system-ui, sans-serif;
+}
+
+/* Base styles */
+html {
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Parallax container */
+.parallax-container {
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.parallax-container > * {
+  position: relative;
+}
+
+/* Selection color */
+::selection {
+  background-color: #c1874280;
+  color: #fff8f0;
+}

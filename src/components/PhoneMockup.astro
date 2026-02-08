@@ -1,0 +1,33 @@
+---
+interface Props {
+  class?: string;
+  gradient?: string;
+  label?: string;
+}
+
+const {
+  class: className = "",
+  gradient = "from-brew-brown to-golden-roast",
+  label = "BrewGPT app screen",
+} = Astro.props;
+---
+
+<div class:list={["phone-frame", className]} aria-label={label} role="img">
+  <!-- Phone body -->
+  <div
+    class="relative w-[260px] h-[540px] rounded-[40px] border-[3px] border-white/15 bg-dark-espresso shadow-2xl overflow-hidden"
+  >
+    <!-- Notch / Dynamic Island -->
+    <div
+      class="absolute top-3 left-1/2 -translate-x-1/2 w-[90px] h-[26px] bg-black rounded-full z-10"
+    >
+    </div>
+
+    <!-- Screen content -->
+    <div class="absolute inset-[3px] rounded-[37px] overflow-hidden">
+      <slot>
+        <div class:list={["w-full h-full bg-gradient-to-br", gradient]}></div>
+      </slot>
+    </div>
+  </div>
+</div>

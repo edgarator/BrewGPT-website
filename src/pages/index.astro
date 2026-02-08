@@ -1,0 +1,575 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PhoneMockup from "../components/PhoneMockup.astro";
+import StoreBadges from "../components/StoreBadges.astro";
+---
+
+<Layout>
+  <div class="parallax-container">
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 1: HERO (Dark)
+         ═══════════════════════════════════════════════════════ -->
+    <section
+      class="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-espresso-black overflow-hidden"
+    >
+      <!-- Floating coffee beans background -->
+      <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div
+          class="absolute top-[10%] left-[8%] w-3 h-4 bg-brew-brown/20 rounded-full rotate-45 animate-float-slow"
+        >
+        </div>
+        <div
+          class="absolute top-[20%] right-[12%] w-2 h-3 bg-golden-roast/15 rounded-full -rotate-12 animate-float-medium"
+        >
+        </div>
+        <div
+          class="absolute top-[60%] left-[15%] w-2.5 h-3.5 bg-brew-brown/10 rounded-full rotate-[30deg] animate-float-slow"
+        >
+        </div>
+        <div
+          class="absolute top-[70%] right-[20%] w-2 h-3 bg-golden-roast/10 rounded-full -rotate-45 animate-float-medium"
+        >
+        </div>
+        <div
+          class="absolute top-[40%] left-[80%] w-1.5 h-2.5 bg-latte-foam/10 rounded-full rotate-12 animate-float-slow"
+        >
+        </div>
+      </div>
+
+      <!-- Radial glow behind phone -->
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brew-brown/8 rounded-full blur-[120px]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="relative z-10 text-center max-w-3xl mx-auto mb-10">
+        <h1
+          class="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-off-white leading-[1.05]"
+        >
+          Meet<br />
+          <span
+            class="bg-gradient-to-r from-golden-roast to-latte-foam bg-clip-text text-transparent"
+          >
+            Professor Bean
+          </span>
+        </h1>
+        <p class="mt-5 text-lg sm:text-xl text-off-white/60 max-w-md mx-auto">
+          Your AI coffee mentor — personalized advice for every brew.
+        </p>
+      </div>
+
+      <!-- Phone mockup with parallax -->
+      <div class="relative z-10 parallax-phone" data-speed="0.15">
+        <PhoneMockup>
+          <div
+            class="w-full h-full bg-gradient-to-br from-espresso-black via-brew-brown to-golden-roast flex flex-col items-center justify-center p-6"
+          >
+            <!-- Fake chat UI inside phone -->
+            <div class="w-full space-y-3">
+              <div class="bg-white/10 rounded-2xl rounded-tl-sm p-3 max-w-[85%]">
+                <p class="text-[11px] text-off-white/90 leading-snug">
+                  Try grinding two clicks finer and pulling at 93&deg;C. Your 1:2.2 ratio is
+                  solid — the sweetness will pop.
+                </p>
+              </div>
+              <div class="bg-golden-roast/30 rounded-2xl rounded-br-sm p-3 max-w-[70%] ml-auto">
+                <p class="text-[11px] text-off-white/80 leading-snug">
+                  What about bloom time?
+                </p>
+              </div>
+              <div class="bg-white/10 rounded-2xl rounded-tl-sm p-3 max-w-[85%]">
+                <p class="text-[11px] text-off-white/90 leading-snug">
+                  Extend to 45s with a gentle swirl. Your V60 will thank you.
+                </p>
+              </div>
+            </div>
+            <!-- Professor Bean avatar -->
+            <div class="mt-4 flex items-center gap-2">
+              <div
+                class="w-8 h-8 rounded-full bg-golden-roast flex items-center justify-center text-sm"
+              >
+                &#x1F393;
+              </div>
+              <span class="text-[10px] text-off-white/50 font-medium">Professor Bean</span>
+            </div>
+          </div>
+        </PhoneMockup>
+      </div>
+
+      <div class="relative z-10 mt-10">
+        <StoreBadges />
+      </div>
+
+      <!-- Scroll indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
+        aria-hidden="true"
+      >
+        <svg
+          class="w-5 h-5 text-off-white/30"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 2: WHAT IS PROFESSOR BEAN? (Light/Cream)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative bg-warm-cream py-24 sm:py-32 px-6 overflow-hidden">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <!-- Text -->
+          <div>
+            <h2
+              class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-dark-espresso leading-tight"
+            >
+              Coffee advice that<br />
+              <span class="text-brew-brown italic">actually knows your setup</span>
+            </h2>
+            <p class="mt-6 text-base sm:text-lg text-dark-espresso/70 leading-relaxed">
+              Professor Bean analyzes your brew logs — your grinder, your ratios, your water
+              temperature — and gives advice tailored to exactly how <em>you</em> make coffee.
+              No generic tips. Just what works for your gear and taste.
+            </p>
+          </div>
+
+          <!-- Chat bubble mockup -->
+          <div class="relative" aria-label="Example Professor Bean conversation">
+            <div class="parallax-element" data-speed="-0.08">
+              <!-- Incoming bubble -->
+              <div class="bg-white rounded-2xl rounded-tl-sm shadow-lg p-5 mb-4 max-w-sm">
+                <div class="flex items-center gap-2 mb-3">
+                  <div
+                    class="w-7 h-7 rounded-full bg-golden-roast flex items-center justify-center text-xs"
+                  >
+                    &#x1F393;
+                  </div>
+                  <span class="text-xs font-medium text-dark-espresso/60">Professor Bean</span>
+                </div>
+                <p class="text-sm text-dark-espresso/80 leading-relaxed">
+                  Your last three espressos were slightly under-extracted. Try bumping your
+                  temperature to 94&deg;C and extending your pre-infusion by 3 seconds. Based
+                  on your grind setting, this should bring out more sweetness.
+                </p>
+              </div>
+            </div>
+
+            <div class="parallax-element" data-speed="0.05">
+              <!-- Outgoing bubble -->
+              <div
+                class="bg-brew-brown/10 rounded-2xl rounded-br-sm shadow-md p-4 max-w-[70%] ml-auto"
+              >
+                <p class="text-sm text-dark-espresso/70">Thanks! Should I adjust dose too?</p>
+              </div>
+            </div>
+
+            <!-- Decorative accent -->
+            <div
+              class="absolute -top-4 -right-4 w-20 h-20 bg-golden-roast/10 rounded-full blur-xl"
+              aria-hidden="true"
+            >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 3: BENEFITS (Dark)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative bg-espresso-black py-24 sm:py-32 px-6 overflow-hidden">
+      <!-- Subtle glow -->
+      <div
+        class="absolute top-0 right-0 w-[400px] h-[400px] bg-brew-brown/5 rounded-full blur-[100px]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="max-w-5xl mx-auto">
+        <h2
+          class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-center text-off-white mb-16 leading-tight"
+        >
+          Brew better,<br />
+          <span
+            class="bg-gradient-to-r from-golden-roast to-latte-foam bg-clip-text text-transparent"
+          >
+            every single cup
+          </span>
+        </h2>
+
+        <div class="grid sm:grid-cols-3 gap-8 sm:gap-10">
+          <!-- Benefit 1 -->
+          <div class="group text-center">
+            <div
+              class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-golden-roast/10 border border-golden-roast/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                class="w-7 h-7 text-golden-roast"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-off-white mb-2">
+              Personalized Advice
+            </h3>
+            <p class="text-sm text-off-white/50 leading-relaxed">
+              Tailored to your brew method, grinder, beans, and preferences. Not
+              one-size-fits-all — it's <em>your</em> coffee coach.
+            </p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="group text-center">
+            <div
+              class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-golden-roast/10 border border-golden-roast/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                class="w-7 h-7 text-golden-roast"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-off-white mb-2">
+              Learn as You Brew
+            </h3>
+            <p class="text-sm text-off-white/50 leading-relaxed">
+              Tips get smarter with every log. Track trends and see what's actually moving the
+              needle for your taste.
+            </p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="group text-center">
+            <div
+              class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-golden-roast/10 border border-golden-roast/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                class="w-7 h-7 text-golden-roast"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-off-white mb-2">
+              Share Your Wins
+            </h3>
+            <p class="text-sm text-off-white/50 leading-relaxed">
+              Generate beautiful brew cards with your recipe and Professor Bean's take. Share
+              with fellow coffee nerds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 4: HOW IT WORKS (Light/Cream)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative bg-warm-cream py-24 sm:py-32 px-6 overflow-hidden">
+      <div class="max-w-5xl mx-auto">
+        <h2
+          class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-center text-dark-espresso mb-20 leading-tight"
+        >
+          Three steps to<br />
+          <span class="text-brew-brown italic">better coffee</span>
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-12 md:gap-8">
+          <!-- Step 1: Log -->
+          <div class="text-center">
+            <div class="parallax-element mx-auto mb-8" data-speed="0.1">
+              <PhoneMockup class="mx-auto scale-[0.85]">
+                <div
+                  class="w-full h-full bg-gradient-to-b from-espresso-black to-dark-espresso flex flex-col p-5 pt-12"
+                >
+                  <div class="text-[10px] text-off-white/40 mb-2">NEW BREW</div>
+                  <div class="space-y-2.5">
+                    <div class="flex justify-between items-center">
+                      <span class="text-[11px] text-off-white/60">Dose</span>
+                      <span class="text-[11px] text-golden-roast font-medium">18.0g</span>
+                    </div>
+                    <div class="h-px bg-white/5"></div>
+                    <div class="flex justify-between items-center">
+                      <span class="text-[11px] text-off-white/60">Yield</span>
+                      <span class="text-[11px] text-golden-roast font-medium">36.0g</span>
+                    </div>
+                    <div class="h-px bg-white/5"></div>
+                    <div class="flex justify-between items-center">
+                      <span class="text-[11px] text-off-white/60">Time</span>
+                      <span class="text-[11px] text-golden-roast font-medium">28s</span>
+                    </div>
+                    <div class="h-px bg-white/5"></div>
+                    <div class="flex justify-between items-center">
+                      <span class="text-[11px] text-off-white/60">Temperature</span>
+                      <span class="text-[11px] text-golden-roast font-medium">93&deg;C</span>
+                    </div>
+                    <div class="h-px bg-white/5"></div>
+                    <div class="flex justify-between items-center">
+                      <span class="text-[11px] text-off-white/60">Grind</span>
+                      <span class="text-[11px] text-golden-roast font-medium">15</span>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-auto bg-golden-roast rounded-xl py-2.5 text-center text-[11px] font-medium text-espresso-black"
+                  >
+                    Save Brew
+                  </div>
+                </div>
+              </PhoneMockup>
+            </div>
+            <div
+              class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-dark-espresso text-off-white font-heading font-bold text-sm mb-3"
+            >
+              1
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-dark-espresso mb-1">Log</h3>
+            <p class="text-sm text-dark-espresso/60">
+              Record your brew with the fields that matter to you.
+            </p>
+          </div>
+
+          <!-- Step 2: Ask -->
+          <div class="text-center">
+            <div class="parallax-element mx-auto mb-8" data-speed="-0.06">
+              <PhoneMockup class="mx-auto scale-[0.85]">
+                <div
+                  class="w-full h-full bg-gradient-to-b from-espresso-black to-dark-espresso flex flex-col p-5 pt-12"
+                >
+                  <div class="text-[10px] text-off-white/40 mb-3">PROFESSOR BEAN</div>
+                  <div class="space-y-3 flex-1">
+                    <div class="bg-white/10 rounded-xl rounded-tl-sm p-3">
+                      <p class="text-[10px] text-off-white/80 leading-snug">
+                        Nice shot! Your ratio of 1:2 is classic but try 1:2.2 for more
+                        sweetness from this light roast.
+                      </p>
+                    </div>
+                    <div
+                      class="bg-golden-roast/20 rounded-xl rounded-br-sm p-3 ml-auto max-w-[80%]"
+                    >
+                      <p class="text-[10px] text-off-white/70 leading-snug">
+                        How about grind?
+                      </p>
+                    </div>
+                    <div class="bg-white/10 rounded-xl rounded-tl-sm p-3">
+                      <p class="text-[10px] text-off-white/80 leading-snug">
+                        Go 1 click finer. With 28s at 93&deg;C, a finer grind will balance the
+                        acidity nicely.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </PhoneMockup>
+            </div>
+            <div
+              class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-dark-espresso text-off-white font-heading font-bold text-sm mb-3"
+            >
+              2
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-dark-espresso mb-1">Ask</h3>
+            <p class="text-sm text-dark-espresso/60">
+              Get Professor Bean's take — specific to your gear and taste.
+            </p>
+          </div>
+
+          <!-- Step 3: Improve -->
+          <div class="text-center">
+            <div class="parallax-element mx-auto mb-8" data-speed="0.08">
+              <PhoneMockup class="mx-auto scale-[0.85]">
+                <div
+                  class="w-full h-full bg-gradient-to-b from-espresso-black to-dark-espresso flex flex-col p-5 pt-12"
+                >
+                  <div class="text-[10px] text-off-white/40 mb-3">TRENDS</div>
+                  <!-- Mini chart -->
+                  <div class="flex-1 flex flex-col justify-center">
+                    <div class="flex items-end gap-1.5 h-24 mb-3">
+                      <div class="flex-1 bg-brew-brown/40 rounded-t" style="height: 40%"></div>
+                      <div class="flex-1 bg-brew-brown/50 rounded-t" style="height: 55%"></div>
+                      <div class="flex-1 bg-brew-brown/40 rounded-t" style="height: 45%"></div>
+                      <div class="flex-1 bg-brew-brown/60 rounded-t" style="height: 65%"></div>
+                      <div class="flex-1 bg-golden-roast/70 rounded-t" style="height: 75%"></div>
+                      <div class="flex-1 bg-golden-roast/80 rounded-t" style="height: 80%"></div>
+                      <div class="flex-1 bg-golden-roast rounded-t" style="height: 90%"></div>
+                    </div>
+                    <div class="text-center">
+                      <div class="text-[18px] font-bold text-golden-roast">4.5</div>
+                      <div class="text-[9px] text-off-white/40">avg rating this week</div>
+                    </div>
+                    <div class="flex items-center justify-center gap-1 mt-2">
+                      <svg
+                        class="w-3 h-3 text-green-400"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                      </svg>
+                      <span class="text-[10px] text-green-400">+0.8 from last week</span>
+                    </div>
+                  </div>
+                </div>
+              </PhoneMockup>
+            </div>
+            <div
+              class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-dark-espresso text-off-white font-heading font-bold text-sm mb-3"
+            >
+              3
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-dark-espresso mb-1">Improve</h3>
+            <p class="text-sm text-dark-espresso/60">
+              Watch your ratings climb as you dial in your perfect cup.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SECTION 5: CTA FOOTER (Dark)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="relative bg-espresso-black py-24 sm:py-32 px-6 overflow-hidden">
+      <!-- Glow -->
+      <div
+        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-golden-roast/8 rounded-full blur-[100px]"
+        aria-hidden="true"
+      >
+      </div>
+
+      <div class="relative z-10 max-w-2xl mx-auto text-center">
+        <h2
+          class="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-off-white leading-tight mb-6"
+        >
+          Start brewing<br />
+          <span
+            class="bg-gradient-to-r from-golden-roast to-latte-foam bg-clip-text text-transparent"
+          >
+            smarter
+          </span>
+        </h2>
+        <p class="text-base sm:text-lg text-off-white/50 mb-10 max-w-md mx-auto">
+          Download BrewGPT and let Professor Bean guide your next cup.
+        </p>
+
+        <StoreBadges class="mb-16" />
+      </div>
+
+      <!-- Footer -->
+      <footer class="relative z-10 border-t border-white/5 pt-8 mt-8">
+        <div
+          class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-off-white/30"
+        >
+          <p>&copy; 2026 BrewGPT. All rights reserved.</p>
+          <div class="flex items-center gap-6">
+            <a href="#" class="hover:text-off-white/60 transition-colors">Privacy</a>
+            <a href="#" class="hover:text-off-white/60 transition-colors">Terms</a>
+            <a
+              href="mailto:hello@brewgpt.app"
+              class="hover:text-off-white/60 transition-colors">Contact</a
+            >
+          </div>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+  <!-- Parallax scroll script -->
+  <script>
+    const elements = document.querySelectorAll<HTMLElement>(
+      ".parallax-phone, .parallax-element"
+    );
+
+    let ticking = false;
+    const container = document.querySelector(".parallax-container");
+
+    function updateParallax() {
+      if (!container) return;
+
+      elements.forEach((el) => {
+        const speed = parseFloat(el.dataset.speed || "0.1");
+        const rect = el.getBoundingClientRect();
+        const centerY = rect.top + rect.height / 2;
+        const viewportCenter = window.innerHeight / 2;
+        const offset = (centerY - viewportCenter) * speed;
+        el.style.transform = `translateY(${offset}px)`;
+      });
+
+      ticking = false;
+    }
+
+    container?.addEventListener("scroll", () => {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    });
+
+    // Initial call
+    updateParallax();
+  </script>
+
+  <!-- Floating animation styles -->
+  <style>
+    @keyframes float-slow {
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-20px) rotate(5deg);
+      }
+    }
+
+    @keyframes float-medium {
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-12px) rotate(-3deg);
+      }
+    }
+
+    .animate-float-slow {
+      animation: float-slow 8s ease-in-out infinite;
+    }
+
+    .animate-float-medium {
+      animation: float-medium 5s ease-in-out infinite;
+    }
+  </style>
+</Layout>
